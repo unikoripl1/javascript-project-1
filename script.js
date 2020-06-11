@@ -102,26 +102,36 @@ if(johnAverage > mikeAverage && johnAverage > maryAverage){
     console.log('lol');
 }
 */
-function calculateAge(birthYear){
-    return 2020 - birthYear;
+/*
+function calculateAge(birthDate){
+return 2020 - birthDate;
 }
 
 var ageJohn = calculateAge(1996);
-var ageMark = calculateAge(2001);
-var ageKate = calculateAge(1971);
-console.log(ageJohn, ageMark, ageKate);
 
-function yearsUntilRetirement(year, firstName){
+
+function yearsUntilRetirement(year, name){
     var age = calculateAge(year);
-    var retirement = 65 - age;
-    console.log(ageJohn, ageMark, ageKate);   
+    var retirement = 67 - age;
+    console.log(name + ' retires in ' + retirement + ' years');
 }
 
+yearsUntilRetirement(1996, 'Jan');
+*/
+var whatDoYouDo = function(job, firstName){
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
 
-
-
-
-
+console.log(whatDoYouDo('teacher', 'John'))
 
 
 
