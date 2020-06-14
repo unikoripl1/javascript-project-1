@@ -118,6 +118,8 @@ function yearsUntilRetirement(year, name){
 
 yearsUntilRetirement(1996, 'Jan');
 */
+
+/*
 var whatDoYouDo = function(job, firstName){
     switch(job){
         case 'teacher':
@@ -133,13 +135,65 @@ var whatDoYouDo = function(job, firstName){
 
 console.log(whatDoYouDo('teacher', 'John'))
 
+*/
+//arrays
+/*
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+ 
+console.log(names);
 
 
+names[1] = 'Ben';
+
+names[names.length] = 'Mary';
+console.log(names);
+console.log(names.length);
+
+var John = ['John','Smith', 1996, 'teacher', false];
+John.push('blue','yellow');
+John.unshift('Mr.');
+John.pop();
+John.shift();
 
 
+console.log(John);
+console.log(John.indexOf(23));
 
+var isDesigner = John.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
 
+console.log(isDesigner);
+*/
 
+//tips
+function tipCalculator(bill){
 
+    var perc;
 
+    if(bill < 50)
+    {
+        perc = 0.2;
+    }
+    else if (bill >= 50 && bill < 200)
+    {
+        perc = .15;
+    }
+    else
+    {
+        perc = 0.1;
+    }
+    return bill * perc;
+}
 
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+
+console.log(tips);
+
+var finalValues = [bills[0]+ tips[0],
+                    bills[1]+ tips[1],
+                    bills[2]+ tips[2]];
+
+console.log(finalValues);
