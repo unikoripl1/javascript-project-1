@@ -166,6 +166,7 @@ console.log(isDesigner);
 */
 
 //tips
+/*
 function tipCalculator(bill){
 
     var perc;
@@ -197,3 +198,59 @@ var finalValues = [bills[0]+ tips[0],
                     bills[2]+ tips[2]];
 
 console.log(finalValues);
+*/
+//objects and properties
+/*
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1994,
+    isMarried: false,
+    calcAge: function(){
+        this.age = 2020 - this.birthYear;
+    }
+};
+
+var x = 'birthYear';
+john['isMarried'] = true;
+console.log(john.isMarried);
+
+john.calcAge();
+console.log(john.age);
+*/
+//BMI objects
+
+var john = {
+    name: 'John',
+    weight: 61,
+    height: 1.69,
+    calcBMI: function(){
+        this.BMI = this.weight / (this.height * this.height)
+    }
+    
+};
+john.calcBMI();
+console.log(john.BMI);
+
+var mike = {
+    name: 'Mike',
+    weight: 63,
+    height: 1.69,
+    calcBMI: function(){
+        this.BMI = this.weight / (this.height * this.height)
+    }
+    
+};
+mike.calcBMI();
+console.log(mike.BMI);
+
+if(john.BMI>mike.BMI){
+    answer = 'John';
+}
+else if(john.BMI<mike.BMI){
+    answer = mike.name + "'s" + ' BMI is higher than ' + john.name + "'s";
+}
+else{
+    answer = 'equal';
+}
+console.log(answer);
